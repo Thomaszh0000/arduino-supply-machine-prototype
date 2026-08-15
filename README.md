@@ -1,6 +1,6 @@
 # arduino-supply-machine-prototype
 
-A physical Arduino-based vending/supply machine prototype built with stepper motors, 3D-printed rails, keypad input, and an LCD interface. The project demonstrates basic embedded-systems design, motor control, hardware integration, and iterative prototyping.
+A physical Arduino-based vending/supply machine prototype built with stepper motors, 3D-printed rails, keypad input, and an LCD interface. 
 
 ## Overview
 
@@ -19,8 +19,7 @@ The project combines:
 ## Main Features
 
 - Two-item dispensing mechanism using stepper motors
-- Button-based control in the first prototype version
-- Keypad-based password input in the second prototype version
+- Button-based control and Keypad-based password
 - LCD messages for user interaction
 - Motorized open-and-close motion for the dispensing mechanism
 - Modular code split across two Arduino prototype files
@@ -73,6 +72,4 @@ This project helped me practice embedded programming, hardware debugging, pin ma
 
 ## Limitations
 
-This was a prototype, not a commercial vending machine. The password is a demonstration feature, the enclosure was built with simple materials, and the motor timing was calibrated manually for a specific physical setup.
-
-Future improvements could include a cleaner enclosure, stronger power distribution, sensor feedback for item delivery, better cable management, and photo/video documentation of the final build.
+This was a prototype, not a commercial vending machine. The password is a demonstration feature, the enclosure was built with simple materials, and the motor timing was calibrated manually for a specific physical setup, the rail system was bought from an online shop.
