@@ -40,6 +40,6 @@ Ctrl + Shift + M
 
 - Check the motor pin order carefully. The 28BYJ-48 motor direction depends on the pin sequence used in the `Stepper` constructor.
 - The I2C LCD address is commonly `0x27`, but some modules may use a different address.
-- The motor loop count was calibrated for the original prototype rail length. Recalibrate it if the rail size changes.
+- The motor loop count was calibrated for the original prototype rail length(3d printed rail bought online). Recalibrate it if the rail size changes.
 - Use stable external power if the motors behave inconsistently.
 - Test each subsystem separately before combining the motors, keypad, LCD, and enclosure.
