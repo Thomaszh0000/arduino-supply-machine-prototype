@@ -1,4 +1,4 @@
-# Arduino Vending Machine Prototype
+# arduino-supply-machine-prototype
 
 A physical Arduino-based vending/supply machine prototype built with stepper motors, 3D-printed rails, keypad input, and an LCD interface. The project demonstrates basic embedded-systems design, motor control, hardware integration, and iterative prototyping.
 
