@@ -58,9 +58,15 @@ The project used multiple Arduino Uno boards because the power requirements of t
 
 This public repository currently documents the code, hardware list, and setup notes.
 
+Version 1: button-controlled motor test
+
+![Arduino first prototype wiring diagram](docs/arduino_first_wiring_diagram.png)
+
+Version 2: keypad, LCD, and two-motor control
+
 ![Arduino second prototype wiring diagram](docs/arduino_second_wiring_diagram.png)
 
-The editable vector version is available at [docs/arduino_second_wiring_diagram.svg](docs/arduino_second_wiring_diagram.svg).
+Editable vector versions are available at [docs/arduino_first_wiring_diagram.svg](docs/arduino_first_wiring_diagram.svg) and [docs/arduino_second_wiring_diagram.svg](docs/arduino_second_wiring_diagram.svg).
 
 Prototype photos or a short demo video can be added later to make the physical build easier to inspect.
 
