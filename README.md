@@ -1,6 +1,6 @@
 # arduino-supply-machine-prototype
 
-A physical Arduino-based vending/supply machine prototype built with stepper motors, 3D-printed rails, keypad input, and an LCD interface. 
+A physical Arduino-based supply machine prototype built with stepper motors, 3D-printed rails, keypad input, and an LCD interface. 
 
 ## Overview
 
@@ -42,7 +42,7 @@ Initial prototype using two buttons to control two stepper motors. This version 
 
 `Arduino_second.cpp`
 
-Expanded prototype using a 4 x 4 keypad, I2C LCD, and two stepper motors. This version adds a simple password flow, rotating LCD messages, and a timed close mechanism.
+Expanded prototype using a 4 x 4 keypad, I2C LCD, and two stepper motors. This version adds a simple password mechanism, rotating LCD messages, and a timed close mechanism.
 
 `requirements.md`
 
@@ -66,10 +66,6 @@ Version 2: keypad, LCD, and two-motor control
 
 ![Arduino second prototype wiring diagram](docs/arduino_second_wiring_diagram.png)
 
-Editable vector versions are available at [docs/arduino_first_wiring_diagram.svg](docs/arduino_first_wiring_diagram.svg) and [docs/arduino_second_wiring_diagram.svg](docs/arduino_second_wiring_diagram.svg).
-
-Prototype photos or a short demo video can be added later to make the physical build easier to inspect.
-
 ## Setup Notes
 
 1. Install the Arduino IDE.
@@ -81,11 +77,3 @@ Prototype photos or a short demo video can be added later to make the physical b
 7. Test motor direction and rail distance before installing the mechanism inside the housing.
 
 The value `10787` in the motor loops was calibrated for the prototype rail distance used in this build. It should be adjusted if the rail length, motor speed, or dispensing mechanism changes.
-
-## What I Learned
-
-This project helped me practice embedded programming, hardware debugging, pin mapping, motor calibration, and physical system integration. It also taught me that mechanical design and power delivery can be just as important as the code when building a working prototype.
-
-## Limitations
-
-This was a prototype, not a commercial vending machine. The password is a demonstration feature, the enclosure was built with simple materials, and the motor timing was calibrated manually for a specific physical setup. The rail system was purchased from an online shop.
