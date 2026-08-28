@@ -1,128 +1,129 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="820" viewBox="0 0 1400 820" role="img" aria-labelledby="title desc">
-  <title id="title">Arduino first prototype wiring diagram</title>
-  <desc id="desc">Wiring diagram based on Arduino_first.cpp showing Arduino Uno connections to two three-pin buttons, two ULN2003 driver boards, and two 28BYJ-48 stepper motors.</desc>
-  <defs>
-    <style>
-      .bg { fill: #f7f8fa; }
-      .board { fill: #1f77b4; stroke: #163f63; stroke-width: 3; }
-      .module { fill: #ffffff; stroke: #2f3640; stroke-width: 2; }
-      .driver { fill: #eef7ff; stroke: #1f77b4; stroke-width: 2; }
-      .motor { fill: #fff7e6; stroke: #b36b00; stroke-width: 2; }
-      .note { fill: #fff1f1; stroke: #c0392b; stroke-width: 2; }
-      .pin { fill: #ffffff; stroke: #2f3640; stroke-width: 1.5; }
-      .pinText { font-family: Arial, Helvetica, sans-serif; font-size: 15px; fill: #1f2933; }
-      .small { font-family: Arial, Helvetica, sans-serif; font-size: 14px; fill: #3d4852; }
-      .label { font-family: Arial, Helvetica, sans-serif; font-size: 20px; font-weight: 700; fill: #1f2933; }
-      .title { font-family: Arial, Helvetica, sans-serif; font-size: 30px; font-weight: 700; fill: #111827; }
-      .subtitle { font-family: Arial, Helvetica, sans-serif; font-size: 17px; fill: #4b5563; }
-      .wireButton { stroke: #6f42c1; stroke-width: 4; fill: none; }
-      .wireMotor3 { stroke: #d35400; stroke-width: 4; fill: none; }
-      .wireMotor4 { stroke: #c0392b; stroke-width: 4; fill: none; }
-      .wirePower { stroke: #222222; stroke-width: 3; fill: none; stroke-dasharray: 8 7; }
-      .wire5v { stroke: #e74c3c; stroke-width: 3; fill: none; stroke-dasharray: 8 7; }
-    </style>
-  </defs>
-
-  <rect class="bg" x="0" y="0" width="1400" height="820"/>
-  <text class="title" x="60" y="55">Arduino Supply Machine Prototype - First Wiring Diagram</text>
-  <text class="subtitle" x="60" y="85">Based on Arduino_first.cpp. This version tests two buttons controlling two stepper motors.</text>
-
-  <rect class="board" x="515" y="145" width="330" height="540" rx="18"/>
-  <text class="label" x="620" y="185" fill="#ffffff">Arduino Uno</text>
-  <text class="small" x="560" y="213" fill="#ffffff">First prototype controller</text>
-
-  <text class="small" x="545" y="248" fill="#ffffff">Digital Pins</text>
-  <rect class="pin" x="535" y="268" width="56" height="28"/><text class="pinText" x="549" y="288">D2</text>
-  <rect class="pin" x="535" y="303" width="56" height="28"/><text class="pinText" x="549" y="323">D3</text>
-  <rect class="pin" x="535" y="338" width="56" height="28"/><text class="pinText" x="549" y="358">D4</text>
-  <rect class="pin" x="535" y="373" width="56" height="28"/><text class="pinText" x="549" y="393">D5</text>
-  <rect class="pin" x="635" y="268" width="56" height="28"/><text class="pinText" x="648" y="288">5V</text>
-  <rect class="pin" x="635" y="303" width="56" height="28"/><text class="pinText" x="646" y="323">GND</text>
-
-  <text class="small" x="545" y="510" fill="#ffffff">Analog Pins</text>
-  <rect class="pin" x="535" y="530" width="56" height="28"/><text class="pinText" x="548" y="550">A0</text>
-  <rect class="pin" x="535" y="565" width="56" height="28"/><text class="pinText" x="548" y="585">A1</text>
-  <rect class="pin" x="770" y="495" width="56" height="28"/><text class="pinText" x="783" y="515">A2</text>
-  <rect class="pin" x="770" y="530" width="56" height="28"/><text class="pinText" x="783" y="550">A3</text>
-  <rect class="pin" x="770" y="565" width="56" height="28"/><text class="pinText" x="783" y="585">A4</text>
-  <rect class="pin" x="770" y="600" width="56" height="28"/><text class="pinText" x="783" y="620">A5</text>
-
-  <rect class="module" x="80" y="250" width="260" height="130" rx="10"/>
-  <text class="label" x="135" y="285">Button 1</text>
-  <text class="small" x="118" y="312">digitalRead(A1)</text>
-  <text class="small" x="118" y="335">Triggers myStepper4</text>
-  <rect class="pin" x="305" y="325" width="72" height="24"/><text class="pinText" x="316" y="343">SIG A1</text>
-  <rect class="pin" x="110" y="340" width="54" height="24"/><text class="pinText" x="123" y="358">5V</text>
-  <rect class="pin" x="175" y="340" width="58" height="24"/><text class="pinText" x="184" y="358">GND</text>
-
-  <rect class="module" x="80" y="455" width="260" height="130" rx="10"/>
-  <text class="label" x="135" y="490">Button 2</text>
-  <text class="small" x="118" y="517">digitalRead(A0)</text>
-  <text class="small" x="118" y="540">Triggers myStepper3</text>
-  <rect class="pin" x="305" y="530" width="72" height="24"/><text class="pinText" x="316" y="548">SIG A0</text>
-  <rect class="pin" x="110" y="545" width="54" height="24"/><text class="pinText" x="123" y="563">5V</text>
-  <rect class="pin" x="175" y="545" width="58" height="24"/><text class="pinText" x="184" y="563">GND</text>
-
-  <rect class="driver" x="1010" y="170" width="245" height="210" rx="10"/>
-  <text class="label" x="1055" y="205">ULN2003 #3</text>
-  <text class="small" x="1047" y="232">Stepper myStepper3</text>
-  <text class="small" x="1034" y="255">IN1, IN2, IN3, IN4</text>
-  <rect class="pin" x="990" y="275" width="72" height="24"/><text class="pinText" x="1000" y="293">IN1 D2</text>
-  <rect class="pin" x="990" y="305" width="72" height="24"/><text class="pinText" x="1000" y="323">IN2 D4</text>
-  <rect class="pin" x="990" y="335" width="72" height="24"/><text class="pinText" x="1000" y="353">IN3 D3</text>
-  <rect class="pin" x="990" y="365" width="72" height="24"/><text class="pinText" x="1000" y="383">IN4 D5</text>
-  <rect class="pin" x="1145" y="355" width="54" height="24"/><text class="pinText" x="1158" y="373">5V</text>
-  <rect class="pin" x="1205" y="355" width="58" height="24"/><text class="pinText" x="1214" y="373">GND</text>
-  <circle class="motor" cx="1220" cy="475" r="64"/>
-  <text class="label" x="1182" y="472">28BYJ</text>
-  <text class="small" x="1181" y="495">Motor 3</text>
-
-  <rect class="driver" x="1010" y="520" width="245" height="210" rx="10"/>
-  <text class="label" x="1055" y="555">ULN2003 #4</text>
-  <text class="small" x="1047" y="582">Stepper myStepper4</text>
-  <text class="small" x="1034" y="605">IN1, IN2, IN3, IN4</text>
-  <rect class="pin" x="990" y="625" width="72" height="24"/><text class="pinText" x="1000" y="643">IN1 A2</text>
-  <rect class="pin" x="990" y="655" width="72" height="24"/><text class="pinText" x="1000" y="673">IN2 A4</text>
-  <rect class="pin" x="990" y="685" width="72" height="24"/><text class="pinText" x="1000" y="703">IN3 A3</text>
-  <rect class="pin" x="990" y="715" width="72" height="24"/><text class="pinText" x="1000" y="733">IN4 A5</text>
-  <rect class="pin" x="1145" y="705" width="54" height="24"/><text class="pinText" x="1158" y="723">5V</text>
-  <rect class="pin" x="1205" y="705" width="58" height="24"/><text class="pinText" x="1214" y="723">GND</text>
-  <circle class="motor" cx="1220" cy="790" r="38"/>
-  <text class="small" x="1192" y="788">28BYJ</text>
-  <text class="small" x="1198" y="806">Motor 4</text>
-
-  <rect class="note" x="910" y="35" width="430" height="95" rx="10"/>
-  <text class="label" x="945" y="68">Input Note</text>
-  <text class="small" x="945" y="93">The code reads LOW on A0/A1.</text>
-  <text class="small" x="945" y="114">Use suitable pull-up/pull-down wiring or adjust pinMode.</text>
-
-  <path class="wireButton" d="M377 337 C470 337 470 580 535 580"/>
-  <path class="wireButton" d="M377 542 C470 542 480 542 535 542"/>
-  <path class="wire5v" d="M137 340 C280 250 510 270 635 282"/>
-  <path class="wirePower" d="M204 340 C320 295 520 300 635 317"/>
-  <path class="wire5v" d="M137 545 C300 510 545 360 635 282"/>
-  <path class="wirePower" d="M204 545 C330 525 555 380 635 317"/>
-
-  <path class="wireMotor3" d="M591 282 C770 250 880 287 990 287"/>
-  <path class="wireMotor3" d="M591 352 C760 320 880 317 990 317"/>
-  <path class="wireMotor3" d="M591 317 C760 300 880 347 990 347"/>
-  <path class="wireMotor3" d="M591 387 C760 360 880 377 990 377"/>
-
-  <path class="wireMotor4" d="M826 509 C890 545 935 637 990 637"/>
-  <path class="wireMotor4" d="M826 579 C890 600 935 667 990 667"/>
-  <path class="wireMotor4" d="M826 544 C890 575 935 697 990 697"/>
-  <path class="wireMotor4" d="M826 614 C890 630 935 727 990 727"/>
-
-  <path class="wire5v" d="M1172 355 C1165 265 1160 185 1130 130"/>
-  <path class="wirePower" d="M1234 355 C1240 275 1235 185 1195 130"/>
-  <path class="wireMotor3" d="M1135 380 C1140 420 1165 452 1180 470"/>
-
-  <path class="wire5v" d="M1172 705 C1135 680 1140 590 1130 500"/>
-  <path class="wirePower" d="M1234 705 C1260 660 1245 580 1195 500"/>
-  <path class="wireMotor4" d="M1135 730 C1165 755 1185 778 1190 790"/>
-
-  <rect class="module" x="60" y="730" width="735" height="60" rx="8"/>
-  <line class="wireButton" x1="85" y1="755" x2="145" y2="755"/><text class="small" x="155" y="760">Button signal</text>
-  <line class="wireMotor3" x1="285" y1="755" x2="345" y2="755"/><text class="small" x="355" y="760">Stepper myStepper3 signal</text>
-  <line class="wireMotor4" x1="575" y1="755" x2="635" y2="755"/><text class="small" x="645" y="760">Stepper myStepper4 signal</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1050" viewBox="0 0 1600 1050" role="img">
+<title>Arduino Supply Machine Prototype - First Wiring Diagram</title>
+<desc>Clean pin mapping based on Arduino_first.cpp: two buttons and two stepper motors.</desc>
+<rect x="0" y="0" width="100%" height="100%" fill="#f7f8fa"/>
+<text x="60" y="84" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" fill="#111827">Arduino Supply Machine Prototype - First Wiring Diagram</text>
+<text x="60" y="112" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" fill="#4b5563">Clean pin mapping based on Arduino_first.cpp: two buttons and two stepper motors.</text>
+<rect x="520" y="170" width="560" height="760" rx="12" fill="#e8f3ff" stroke="#1f77b4" stroke-width="2"/>
+<text x="542" y="213" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" fill="#1f2933">Arduino Uno</text>
+<text x="542" y="238" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#4b5563">First prototype controller</text>
+<rect x="550" y="250" width="500" height="546" rx="8" fill="#ffffff" stroke="#2f3640" stroke-width="2"/>
+<rect x="550" y="250" width="500" height="42" fill="#edf2f7" stroke="#2f3640" stroke-width="1"/>
+<text x="562" y="277" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#111827">Arduino Pin</text>
+<line x1="680" y1="250" x2="680" y2="796" stroke="#cbd5e1" stroke-width="1"/>
+<text x="692" y="277" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#111827">Connected Module</text>
+<line x1="850" y1="250" x2="850" y2="796" stroke="#cbd5e1" stroke-width="1"/>
+<text x="862" y="277" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#111827">Module Pin / Role</text>
+<line x1="550" y1="292" x2="1050" y2="292" stroke="#e2e8f0" stroke-width="1"/>
+<text x="562" y="316" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#1f2933">A1</text>
+<text x="692" y="316" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#1f2933">Button 1</text>
+<text x="862" y="316" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#1f2933">Signal input, read LOW</text>
+<line x1="550" y1="334" x2="1050" y2="334" stroke="#e2e8f0" stroke-width="1"/>
+<text x="562" y="358" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#1f2933">A0</text>
+<text x="692" y="358" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#1f2933">Button 2</text>
+<text x="862" y="358" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#1f2933">Signal input, read LOW</text>
+<line x1="550" y1="376" x2="1050" y2="376" stroke="#e2e8f0" stroke-width="1"/>
+<text x="562" y="400" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#1f2933">D2</text>
+<text x="692" y="400" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#1f2933">ULN2003 #3</text>
+<text x="862" y="400" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#1f2933">IN1 for myStepper3</text>
+<line x1="550" y1="418" x2="1050" y2="418" stroke="#e2e8f0" stroke-width="1"/>
+<text x="562" y="442" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#1f2933">D4</text>
+<text x="692" y="442" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#1f2933">ULN2003 #3</text>
+<text x="862" y="442" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#1f2933">IN2 for myStepper3</text>
+<line x1="550" y1="460" x2="1050" y2="460" stroke="#e2e8f0" stroke-width="1"/>
+<text x="562" y="484" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#1f2933">D3</text>
+<text x="692" y="484" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#1f2933">ULN2003 #3</text>
+<text x="862" y="484" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#1f2933">IN3 for myStepper3</text>
+<line x1="550" y1="502" x2="1050" y2="502" stroke="#e2e8f0" stroke-width="1"/>
+<text x="562" y="526" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#1f2933">D5</text>
+<text x="692" y="526" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#1f2933">ULN2003 #3</text>
+<text x="862" y="526" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#1f2933">IN4 for myStepper3</text>
+<line x1="550" y1="544" x2="1050" y2="544" stroke="#e2e8f0" stroke-width="1"/>
+<text x="562" y="568" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#1f2933">A2</text>
+<text x="692" y="568" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#1f2933">ULN2003 #4</text>
+<text x="862" y="568" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#1f2933">IN1 for myStepper4</text>
+<line x1="550" y1="586" x2="1050" y2="586" stroke="#e2e8f0" stroke-width="1"/>
+<text x="562" y="610" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#1f2933">A4</text>
+<text x="692" y="610" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#1f2933">ULN2003 #4</text>
+<text x="862" y="610" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#1f2933">IN2 for myStepper4</text>
+<line x1="550" y1="628" x2="1050" y2="628" stroke="#e2e8f0" stroke-width="1"/>
+<text x="562" y="652" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#1f2933">A3</text>
+<text x="692" y="652" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#1f2933">ULN2003 #4</text>
+<text x="862" y="652" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#1f2933">IN3 for myStepper4</text>
+<line x1="550" y1="670" x2="1050" y2="670" stroke="#e2e8f0" stroke-width="1"/>
+<text x="562" y="694" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#1f2933">A5</text>
+<text x="692" y="694" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#1f2933">ULN2003 #4</text>
+<text x="862" y="694" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#1f2933">IN4 for myStepper4</text>
+<line x1="550" y1="712" x2="1050" y2="712" stroke="#e2e8f0" stroke-width="1"/>
+<text x="562" y="736" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#1f2933">5V</text>
+<text x="692" y="736" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#1f2933">Buttons / drivers</text>
+<text x="862" y="736" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#1f2933">Power rail</text>
+<line x1="550" y1="754" x2="1050" y2="754" stroke="#e2e8f0" stroke-width="1"/>
+<text x="562" y="778" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#1f2933">GND</text>
+<text x="692" y="778" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#1f2933">All modules</text>
+<text x="862" y="778" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#1f2933">Common ground</text>
+<rect x="80" y="210" width="350" height="250" rx="12" fill="#ffffff" stroke="#2f3640" stroke-width="2"/>
+<text x="102" y="253" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" fill="#1f2933">Button Inputs</text>
+<text x="102" y="278" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#4b5563">Three-pin button modules</text>
+<rect x="105" y="295" width="300" height="130" rx="8" fill="#ffffff" stroke="#2f3640" stroke-width="2"/>
+<rect x="105" y="295" width="300" height="42" fill="#edf2f7" stroke="#2f3640" stroke-width="1"/>
+<text x="117" y="322" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#111827">Button</text>
+<line x1="215" y1="295" x2="215" y2="425" stroke="#cbd5e1" stroke-width="1"/>
+<text x="227" y="322" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#111827">Signal</text>
+<line x1="305" y1="295" x2="305" y2="425" stroke="#cbd5e1" stroke-width="1"/>
+<text x="317" y="322" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#111827">Power</text>
+<line x1="105" y1="337" x2="405" y2="337" stroke="#e2e8f0" stroke-width="1"/>
+<text x="117" y="361" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#1f2933">Button 1</text>
+<text x="227" y="361" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#1f2933">A1</text>
+<text x="317" y="361" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#1f2933">5V / GND</text>
+<line x1="105" y1="381" x2="405" y2="381" stroke="#e2e8f0" stroke-width="1"/>
+<text x="117" y="405" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#1f2933">Button 2</text>
+<text x="227" y="405" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#1f2933">A0</text>
+<text x="317" y="405" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#1f2933">5V / GND</text>
+<rect x="1160" y="170" width="350" height="300" rx="12" fill="#ffffff" stroke="#2f3640" stroke-width="2"/>
+<text x="1182" y="213" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" fill="#1f2933">Stepper Driver #3</text>
+<text x="1182" y="238" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#4b5563">ULN2003 to 28BYJ-48 Motor 3</text>
+<rect x="1185" y="260" width="300" height="194" rx="8" fill="#ffffff" stroke="#2f3640" stroke-width="2"/>
+<rect x="1185" y="260" width="300" height="42" fill="#edf2f7" stroke="#2f3640" stroke-width="1"/>
+<text x="1197" y="287" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#111827">Driver Pin</text>
+<line x1="1335" y1="260" x2="1335" y2="454" stroke="#cbd5e1" stroke-width="1"/>
+<text x="1347" y="287" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#111827">Arduino Pin</text>
+<line x1="1185" y1="302" x2="1485" y2="302" stroke="#e2e8f0" stroke-width="1"/>
+<text x="1197" y="326" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#1f2933">IN1</text>
+<text x="1347" y="326" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#1f2933">D2</text>
+<line x1="1185" y1="340" x2="1485" y2="340" stroke="#e2e8f0" stroke-width="1"/>
+<text x="1197" y="364" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#1f2933">IN2</text>
+<text x="1347" y="364" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#1f2933">D4</text>
+<line x1="1185" y1="378" x2="1485" y2="378" stroke="#e2e8f0" stroke-width="1"/>
+<text x="1197" y="402" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#1f2933">IN3</text>
+<text x="1347" y="402" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#1f2933">D3</text>
+<line x1="1185" y1="416" x2="1485" y2="416" stroke="#e2e8f0" stroke-width="1"/>
+<text x="1197" y="440" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#1f2933">IN4</text>
+<text x="1347" y="440" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#1f2933">D5</text>
+<rect x="1160" y="540" width="350" height="300" rx="12" fill="#ffffff" stroke="#2f3640" stroke-width="2"/>
+<text x="1182" y="583" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" fill="#1f2933">Stepper Driver #4</text>
+<text x="1182" y="608" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#4b5563">ULN2003 to 28BYJ-48 Motor 4</text>
+<rect x="1185" y="630" width="300" height="194" rx="8" fill="#ffffff" stroke="#2f3640" stroke-width="2"/>
+<rect x="1185" y="630" width="300" height="42" fill="#edf2f7" stroke="#2f3640" stroke-width="1"/>
+<text x="1197" y="657" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#111827">Driver Pin</text>
+<line x1="1335" y1="630" x2="1335" y2="824" stroke="#cbd5e1" stroke-width="1"/>
+<text x="1347" y="657" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#111827">Arduino Pin</text>
+<line x1="1185" y1="672" x2="1485" y2="672" stroke="#e2e8f0" stroke-width="1"/>
+<text x="1197" y="696" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#1f2933">IN1</text>
+<text x="1347" y="696" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#1f2933">A2</text>
+<line x1="1185" y1="710" x2="1485" y2="710" stroke="#e2e8f0" stroke-width="1"/>
+<text x="1197" y="734" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#1f2933">IN2</text>
+<text x="1347" y="734" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#1f2933">A4</text>
+<line x1="1185" y1="748" x2="1485" y2="748" stroke="#e2e8f0" stroke-width="1"/>
+<text x="1197" y="772" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#1f2933">IN3</text>
+<text x="1347" y="772" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#1f2933">A3</text>
+<line x1="1185" y1="786" x2="1485" y2="786" stroke="#e2e8f0" stroke-width="1"/>
+<text x="1197" y="810" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#1f2933">IN4</text>
+<text x="1347" y="810" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#1f2933">A5</text>
+<rect x="80" y="530" width="350" height="185" rx="12" fill="#fff7ed" stroke="#c2410c" stroke-width="2"/>
+<text x="102" y="573" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" fill="#1f2933">Input / Power Note</text>
+<text x="102" y="604" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#3d4852">The code checks for LOW on A0/A1.</text>
+<text x="102" y="629" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#3d4852">Use suitable pull-up or pull-down wiring,</text>
+<text x="102" y="654" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#3d4852">or update pinMode if the wiring changes.</text>
+<text x="102" y="679" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#3d4852">Keep all grounds connected.</text>
 </svg>
