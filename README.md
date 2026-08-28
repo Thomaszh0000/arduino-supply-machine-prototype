@@ -19,7 +19,7 @@ The project combines:
 ## Main Features
 
 - Two-item dispensing mechanism using stepper motors
-- Button-based control and Keypad-based password
+- Button-based control and keypad-based password
 - LCD messages for user interaction
 - Motorized open-and-close motion for the dispensing mechanism
 - Modular code split across two Arduino prototype files
@@ -54,6 +54,10 @@ The prototype used Arduino Uno boards, 28BYJ-48 stepper motors, ULN2003 motor dr
 
 The project used multiple Arduino Uno boards because the power requirements of the motors and display were difficult to handle reliably from a single board during early testing.
 
+## Project Media
+
+This public repository currently documents the code, hardware list, and setup notes. Prototype photos, wiring diagrams, or a short demo video can be added later to make the physical build easier to inspect.
+
 ## Setup Notes
 
 1. Install the Arduino IDE.
@@ -72,4 +76,4 @@ This project helped me practice embedded programming, hardware debugging, pin ma
 
 ## Limitations
 
-This was a prototype, not a commercial vending machine. The password is a demonstration feature, the enclosure was built with simple materials, and the motor timing was calibrated manually for a specific physical setup, the rail system was bought from an online shop.
+This was a prototype, not a commercial vending machine. The password is a demonstration feature, the enclosure was built with simple materials, and the motor timing was calibrated manually for a specific physical setup. The rail system was purchased from an online shop.

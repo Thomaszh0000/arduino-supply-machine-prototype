@@ -27,7 +27,7 @@ Stepper stepper2(stepsPerRev, A0, A2, A1, A3);
 const String password = "1234";
 String inputStr = "";
 
-//messenges below are to be shown on our LCD screen
+//messages below are to be shown on our LCD screen
 const String messages[] = {
   "Hello",
   "This is a supply",
@@ -59,7 +59,7 @@ void setup() {
   pinMode(A2, OUTPUT);
   pinMode(A3, OUTPUT);
 
-  // set the spining speed
+  // set the spinning speed
   stepper1.setSpeed(15);
   stepper2.setSpeed(15);
 }
@@ -85,7 +85,7 @@ void loop() {
     for (uint8_t i = 0; i < inputStr.length(); i++) {
       lcd.print('*');
     }
-    // If user push a button for a long time, it could be read twice. Delay(200) prevent this.
+    // If the user pushes a button for a long time, it could be read twice. Delay(200) helps prevent this.
     delay(200);
     lastMsgTime = now;
   }
@@ -117,11 +117,9 @@ void loop() {
       lcd.print("30s timeout");
 
       unsigned long startWait = millis();
-      bool closed = false;
       while (millis() - startWait < 30000UL) {
         char k = keypad.getKey();
         if (k == '#') {
-          closed = true;
           break;
         }
       }

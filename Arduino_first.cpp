@@ -34,4 +34,4 @@ void loop() {
       }
   }
 }
-//The motor will go forth and back, work as intented.
+//The motor will go forward and backward, working as intended.
