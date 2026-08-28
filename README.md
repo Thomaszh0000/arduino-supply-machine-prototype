@@ -56,7 +56,13 @@ The project used multiple Arduino Uno boards because the power requirements of t
 
 ## Project Media
 
-This public repository currently documents the code, hardware list, and setup notes. Prototype photos, wiring diagrams, or a short demo video can be added later to make the physical build easier to inspect.
+This public repository currently documents the code, hardware list, and setup notes.
+
+![Arduino second prototype wiring diagram](docs/arduino_second_wiring_diagram.png)
+
+The editable vector version is available at [docs/arduino_second_wiring_diagram.svg](docs/arduino_second_wiring_diagram.svg).
+
+Prototype photos or a short demo video can be added later to make the physical build easier to inspect.
 
 ## Setup Notes
 
