@@ -52,17 +52,17 @@ Hardware components, Arduino libraries, and setup notes.
 
 The prototype used Arduino Uno boards, 28BYJ-48 stepper motors, ULN2003 motor driver boards, a 4 x 4 keypad, an I2C LCD module, breadboards, jumper wires, and 3D-printed rails. The physical enclosure was built from cardboard during the prototype stage.
 
-The project used multiple Arduino Uno boards because the power requirements of the motors and display were difficult to handle reliably from a single board during early testing.
+The project used multiple Arduino Uno boards because the power requirements of the motors and display were difficult to be satisfied during testing.
 
 ## Project Media
 
 This public repository currently documents the code, hardware list, and setup notes.
 
-Version 1: button-controlled motor test
+1: button-controlled motor test
 
 ![Arduino first prototype wiring diagram](docs/arduino_first_wiring_diagram.png)
 
-Version 2: keypad, LCD, and two-motor control
+2: keypad, LCD, and two-motor control
 
 ![Arduino second prototype wiring diagram](docs/arduino_second_wiring_diagram.png)
 
