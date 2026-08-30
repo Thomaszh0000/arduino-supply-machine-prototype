@@ -3,7 +3,7 @@
 #include <Keypad.h>
 #include <Stepper.h>
 //requirement for this code file : (1) 28BYJ-48 Step motor X 2 (2) 3D printed rail for 28BYJ-48 Step motor X 2 (3) ULN2003 board X2 (For step motors) (4) Bread Board (5) dupont lines (6) QAPASS Lcd for Arduino (7) Arduino 4 x 4 keypad
-LiquidCrystal_I2C lcd(0x27, 16, 2); // Maybe you need to change "0x27" here
+LiquidCrystal_I2C lcd(0x27, 16, 2); // Maybe you need to change "0x3F" here
 //Setting for keypad
 const byte ROWS = 4, COLS = 4;
 char keys[ROWS][COLS] = {
@@ -22,7 +22,7 @@ const int stepsPerRev = 2048;
 Stepper stepper1(stepsPerRev, 10, 12, 11, 13);
 // motor2 → IN1:A0,  IN2:A2,  IN3:A1,  IN4:A3 !! Notice !!
 Stepper stepper2(stepsPerRev, A0, A2, A1, A3);
-// Notice the sequence of pin setting above, since we want our motor to spin at two directions
+// Notice the sequence of pin setting above
 // password setting
 const String password = "1234";
 String inputStr = "";
