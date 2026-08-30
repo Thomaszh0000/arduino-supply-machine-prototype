@@ -12,7 +12,7 @@ void setup() {
   myStepper3.setSpeed(15);
 }
 //I tested the speed, we set the speed to 15rpm, but maybe it can be set higher.
-//The number 10787 here is correspond to the length of rail, which in my case is 22 cm, so it may need to be changed.
+//The number 10787 here is correspond to the length of rail, which in my case is 22 cm, so it may need to be adjusted.
 int i = 0;
 void loop() {
   int state4 = digitalRead(A1); 
